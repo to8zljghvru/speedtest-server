@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speed Test</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="test-surface" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">Self-hosted speed test</p>
+          <h1 id="page-title">Measure your Internet Speed to this server.</h1>
+          <p class="subcopy">Latency, download, and upload are measured directly against the server serving this page.</p>
+        </div>
+
+        <div class="meter-panel">
+          <div class="gauge" aria-live="polite">
+            <svg viewBox="0 0 220 128" role="img" aria-label="Current speed gauge">
+              <path class="track" d="M24 110a86 86 0 0 1 172 0"></path>
+              <path id="gaugeFill" class="fill" d="M24 110a86 86 0 0 1 172 0"></path>
+              <line id="needle" x1="110" y1="110" x2="110" y2="35"></line>
+              <circle cx="110" cy="110" r="6"></circle>
+            </svg>
+            <div class="readout">
+              <span id="activeValue">--</span>
+              <small id="activeUnit">Mbps</small>
+            </div>
+          </div>
+
+          <button id="startButton" class="start-button" type="button">
+            <span>Start test</span>
+          </button>
+          <p id="statusText" class="status">Ready to test this connection.</p>
+        </div>
+      </section>
+
+      <section class="results-grid" aria-label="Speed test results">
+        <article class="metric">
+          <span>Ping</span>
+          <strong id="pingValue">--</strong>
+          <small>ms</small>
+        </article>
+        <article class="metric">
+          <span>Jitter</span>
+          <strong id="jitterValue">--</strong>
+          <small>ms</small>
+        </article>
+        <article class="metric download">
+          <span>Download</span>
+          <strong id="downloadValue">--</strong>
+          <small>Mbps</small>
+        </article>
+        <article class="metric upload">
+          <span>Upload</span>
+          <strong id="uploadValue">--</strong>
+          <small>Mbps</small>
+        </article>
+      </section>
+
+      <section class="details">
+        <div>
+          <span class="label">Server</span>
+          <strong id="serverLabel">This host</strong>
+        </div>
+        <div>
+          <span class="label">Last run</span>
+          <strong id="lastRun">Never</strong>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
