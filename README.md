@@ -1,13 +1,13 @@
-# Render Speed Test Site
+# Speed Test Site
 
 A self-hosted speed test website and Node server in one small app.
 
-## Render settings
+## How to Host
 
 - Build command: `npm install`
 - Start command: `npm start`
 
-The server uses Render's `PORT` environment variable automatically.
+The server uses `PORT` environment variable.
 
 ## Local development
 
