@@ -1,0 +1,13 @@
+{
+  "name": "render-speedtest-site",
+  "version": "1.0.0",
+  "description": "A Render-ready self-hosted speed test website and server.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
